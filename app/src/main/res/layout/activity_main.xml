@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageView
+        android:id="@+id/iv_bg_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_drawing"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_subject_24"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_top"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_top"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_morning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Good morning,"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=" Alice!"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_morning"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_top" />
+
+    <ImageView
+        android:id="@+id/iv_box1"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:elevation="4dp"
+        android:src="@drawable/box"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_bg"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_bg" />
+
+    <ImageView
+        android:id="@+id/iv_mic"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="20dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_microphone"
+        app:layout_constraintBottom_toTopOf="@id/tv_concert"
+        app:layout_constraintEnd_toEndOf="@id/iv_box1"
+        app:layout_constraintStart_toStartOf="@id/iv_box1"
+        app:layout_constraintTop_toTopOf="@id/iv_box1" />
+
+    <TextView
+        android:id="@+id/tv_concert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Concerts"
+        app:layout_constraintEnd_toEndOf="@id/iv_box1"
+        app:layout_constraintStart_toStartOf="@id/iv_box1"
+        app:layout_constraintTop_toBottomOf="@id/iv_mic" />
+
+    <ImageView
+        android:id="@+id/iv_box2"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:elevation="4dp"
+        android:src="@drawable/box"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_bg"
+        app:layout_constraintStart_toEndOf="@id/iv_box1"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_bg" />
+
+    <ImageView
+        android:id="@+id/iv_guitar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="20dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_electric_guitar"
+        app:layout_constraintBottom_toTopOf="@id/tv_fest"
+        app:layout_constraintEnd_toEndOf="@id/iv_box2"
+        app:layout_constraintStart_toStartOf="@id/iv_box2"
+        app:layout_constraintTop_toTopOf="@id/iv_box2" />
+
+    <TextView
+        android:id="@+id/tv_fest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Festivals"
+        app:layout_constraintEnd_toEndOf="@id/iv_box2"
+        app:layout_constraintStart_toStartOf="@id/iv_box2"
+        app:layout_constraintTop_toBottomOf="@id/iv_guitar" />
+
+    <ImageView
+        android:id="@+id/iv_box3"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:elevation="4dp"
+        android:src="@drawable/box"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_bg"
+        app:layout_constraintStart_toEndOf="@id/iv_box2"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_bg" />
+
+    <ImageView
+        android:id="@+id/iv_ticket"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="20dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_validating_ticket"
+        app:layout_constraintBottom_toTopOf="@id/tv_wshop"
+        app:layout_constraintEnd_toEndOf="@id/iv_box3"
+        app:layout_constraintStart_toStartOf="@id/iv_box3"
+        app:layout_constraintTop_toTopOf="@id/iv_box3" />
+
+    <TextView
+        android:id="@+id/tv_wshop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Workshops"
+        app:layout_constraintEnd_toEndOf="@id/iv_box3"
+        app:layout_constraintStart_toStartOf="@id/iv_box3"
+        app:layout_constraintTop_toBottomOf="@id/iv_ticket" />
+
+    <TextView
+        android:id="@+id/tv_upcoming"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Upcoming Events"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintTop_toBottomOf="@id/iv_box1" />
+
+    <!--  CardView 1  -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_up1"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_upcoming">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_box_up1"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:background="@drawable/gambar1"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_box_in1"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:background="@drawable/box2"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="64dp"
+                android:gravity="center"
+                android:text="CONCERT"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="start"
+                android:text="Leslie Alexander: Live Show"
+                android:textColor="#dbdbdb"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_pin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="20dp"
+                android:text="Keith Arena"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginBottom="20dp"
+                android:text="July 22, 2020"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--Card View Up 2-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toEndOf="@id/cv_up1"
+        app:layout_constraintTop_toBottomOf="@id/tv_upcoming">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_box_up2"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:background="@drawable/gambar2"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_box_in2"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:background="@drawable/box2"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="64dp"
+                android:gravity="center"
+                android:text="SPORT"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="start"
+                android:text="Yoga Retreat at Central Park"
+                android:textColor="#dbdbdb"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_pin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="20dp"
+                android:text="Central Park"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginBottom="20dp"
+                android:text="July 22, 2020"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!--  Popular  -->
+
+    <TextView
+        android:id="@+id/tv_popular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Popular Events in Berlin"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintTop_toBottomOf="@id/cv_up1" />
+
+    <!--  CardView 1  -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pop1"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_popular">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_box_pop1"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:background="@drawable/gambar3"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_box_inpop1"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:background="@drawable/box2"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="64dp"
+                android:gravity="center"
+                android:text="PARTY"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="start"
+                android:text="Electro und Techno Party"
+                android:textColor="#dbdbdb"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_pin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="20dp"
+                android:text="BH Club"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginBottom="20dp"
+                android:text="July 28, 2020"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--Card View Up 2-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toEndOf="@id/cv_pop1"
+        app:layout_constraintTop_toBottomOf="@id/tv_popular">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_box_pop2"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:background="@drawable/gambar4"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_box_inpop2"
+                android:layout_width="192dp"
+                android:layout_height="192dp"
+                android:background="@drawable/box2"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="64dp"
+                android:gravity="center"
+                android:text="WORKSHOP"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="start"
+                android:text="Emotional Intelligence"
+                android:textColor="#dbdbdb"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_pin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="20dp"
+                android:text="Haiden Conference"
+                android:textColor="#dbdbdb"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_marginStart="92dp"
+                android:layout_marginBottom="20dp"
+                android:text="July 22, 2020"
+                android:textColor="#dbdbdb"
+                android:textSize="5sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
